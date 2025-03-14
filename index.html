@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinar el Número</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🎯 Adivina el Número</h1>
+        <label for="difficulty">Selecciona la dificultad:</label>
+        <select id="difficulty">
+            <option value="easy">Fácil (1-10)</option>
+            <option value="normal">Normal (1-50)</option>
+            <option value="hard">Difícil (1-100)</option>
+        </select>
+        <button onclick="startGame()">Iniciar Juego</button>
+
+        <div id="game-area" class="hidden">
+            <p id="info">Intenta adivinar el número secreto.</p>
+            <input type="number" id="guess" min="1" placeholder="Tu número">
+            <button onclick="checkGuess()">Adivinar</button>
+            <p id="feedback"></p>
+            <p id="attempts"></p>
+            <p id="timer">Tiempo: 30s</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
